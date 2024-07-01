@@ -17,7 +17,10 @@ mkdir -p "$CONFIG"
 ln -sf "$SERVER/zsh/.zshrc" "$HOME/.zshrc"
 ln -sf "$SERVER/tmux/" "$CONFIG/"
 
+~/.tmux/plugins/tpm/bin/install_plugins
+
 tmux kill-server
+
 sudo chsh -s $(which zsh) $USER
 
 exec zsh
