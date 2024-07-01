@@ -78,4 +78,3 @@ plugin-source $plugins
 
 source $SERVER/zsh/manual-plugins/dirhistory.plugin.zsh
 source $SERVER/zsh/manual-plugins/fzf-history-search.zsh
-# source $SERVER/zsh/manual-plugins/sysz.zsh

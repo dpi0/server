@@ -30,7 +30,9 @@ export PATH="$PATH:/home/dpi0/.cargo/bin"
 autoload -Uz compinit && compinit
 
 # --- FZF ---
-export FZF_DEFAULT_COMMAND="fd --type f"
+# export FZF_DEFAULT_COMMAND="fd --type f"
+export FZF_DEFAULT_COMMAND="fd --type file --hidden --no-ignore --color=always --exclude .local/state --exclude .Trash-1000 --exclude node-modules --exclude .git --exclude .cargo"
+# fd --type file --hidden --no-ignore --color=always --exclude .local/state --exclude .Trash-1000 --exclude node-modules --exclude .git --exclude .cargo
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --bind "ctrl-y:execute-silent(printf {} | cut -f 2- | wl-copy --trim-newline)"'
 export FZF_CTRL_R_OPTS="
   --preview 'echo {}' --preview-window up:3:hidden:wrap
@@ -45,7 +47,6 @@ export FZF_CTRL_T_OPTS="
 export FZF_ALT_C_OPTS="
   --walker-skip .git,node_modules,target
   --preview 'tree -C {}'"
-# export FZF_DEFAULT_OPTS='--bind "ctrl-y:execute-silent(printf {} | cut -f 2- | wl-copy --trim-newline)"'
 
 # --- FNM NODE ---
 FNM_PATH="/home/dpi0/.local/share/fnm"
@@ -53,8 +54,3 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/home/dpi0/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
-
-# --- RUBY GEMS ---
-export GEM_HOME="$(gem env user_gemhome)"
-export PATH="$PATH:$GEM_HOME/bin"
-
