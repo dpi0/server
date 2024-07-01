@@ -76,6 +76,6 @@ plugins=(
 plugin-clone $repos
 plugin-source $plugins
 
-source ~/.dotfiles/zsh/manual-plugins/dirhistory.plugin.zsh
-source ~/.dotfiles/zsh/manual-plugins/fzf-history-search.zsh
-# source ~/.dotfiles/zsh/manual-plugins/sysz.zsh
+source $SERVER/zsh/manual-plugins/dirhistory.plugin.zsh
+source $SERVER/zsh/manual-plugins/fzf-history-search.zsh
+# source $SERVER/zsh/manual-plugins/sysz.zsh

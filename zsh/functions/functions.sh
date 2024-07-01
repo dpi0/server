@@ -22,18 +22,3 @@ copybuffer () {
         echo "couldn't copy current line, check the functions.zsh"
     fi
 }
-
-launch-waybar(){
-    CONFIG_FILES="$DOTFILES/waybar/config.jsonc $DOTFILES/waybar/style.css "
-    
-    #$DOTFILES/waybar/config2.jsonc
-    
-    trap "killall waybar" EXIT
-    
-    while true; do
-        waybar &
-        inotifywait -e create,modify $CONFIG_FILES
-        killall waybar
-    done
-}
-
