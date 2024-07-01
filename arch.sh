@@ -5,8 +5,8 @@ CONFIG="$HOME/.config"
 
 sudo pacman -Syu
 
-sudo pacman -S zsh tmux fzf neovim bat eza zoxide ripgrep fd btop nftables
-sudo pacman -S docker docker-compose
+sudo pacman -Sy zsh tmux fzf neovim bat eza zoxide ripgrep fd btop nftables
+sudo pacman -Sy docker docker-compose
 sudo usermod -aG docker $USER
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
