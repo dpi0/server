@@ -20,7 +20,6 @@ PIPENV_VENV_IN_PROJECT=0
 
 eval "$(zoxide init zsh --cmd j)"
 
-export DOTFILES="$HOME/.dotfiles"
 export CONFIG="$HOME/.config"
 
 export EDITOR="/usr/bin/nvim"

@@ -18,33 +18,35 @@ fi
 #     tmux attach-session -t dev || tmux new-session -s dev
 # fi
 
+export SERVER="$HOME/.server"
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-source ~/.dotfiles/zsh/options.zsh
+source $SERVER/zsh/options.zsh
 
-source ~/.dotfiles/zsh/alias/alias.sh
-source ~/.dotfiles/zsh/alias/custom-directories.sh
-source ~/.dotfiles/zsh/alias/docker.sh
-source ~/.dotfiles/zsh/alias/git.sh
-source ~/.dotfiles/zsh/alias/pacman.sh
-source ~/.dotfiles/zsh/alias/python.sh
-source ~/.dotfiles/zsh/alias/systemctl.sh
-source ~/.dotfiles/zsh/alias/tmux.sh
-source ~/.dotfiles/zsh/alias/trash.sh
+source $SERVER/zsh/alias/alias.sh
+source $SERVER/zsh/alias/custom-directories.sh
+source $SERVER/zsh/alias/docker.sh
+source $SERVER/zsh/alias/git.sh
+source $SERVER/zsh/alias/pacman.sh
+source $SERVER/zsh/alias/python.sh
+source $SERVER/zsh/alias/systemctl.sh
+source $SERVER/zsh/alias/tmux.sh
+source $SERVER/zsh/alias/trash.sh
 
-source ~/.dotfiles/zsh/functions/functions.sh
-source ~/.dotfiles/zsh/functions/fzf.sh
-source ~/.dotfiles/zsh/functions/paste.sh
-source ~/.dotfiles/zsh/functions/tmux.sh
-source ~/.dotfiles/zsh/functions/docker.sh
-# source ~/.dotfiles/zsh/functions/paste.sh
-# source ~/.dotfiles/zsh/functions/ag.sh
+source $SERVER/zsh/functions/functions.sh
+source $SERVER/zsh/functions/fzf.sh
+source $SERVER/zsh/functions/paste.sh
+source $SERVER/zsh/functions/tmux.sh
+source $SERVER/zsh/functions/docker.sh
+# source $SERVER/zsh/functions/paste.sh
+# source $SERVER/zsh/functions/ag.sh
 
-source ~/.dotfiles/zsh/binds.zsh
+source $SERVER/zsh/binds.zsh
 
 # source the theme
-source ~/.dotfiles/zsh/themes/lean-p10k.zsh # same as ~/.p10k.zsh in the docs
-# source ~/.dotfiles/zsh/themes/robbby-russell-p10k.zsh
+source $SERVER/zsh/themes/lean-p10k.zsh # same as ~/.p10k.zsh in the docs
+# source $SERVER/zsh/themes/robbby-russell-p10k.zsh
 
 # this has to be at the end for zsh=history-substring
-source ~/.dotfiles/zsh/plugin-manager.zsh
+source $SERVER/zsh/plugin-manager.zsh
