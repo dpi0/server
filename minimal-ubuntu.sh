@@ -7,6 +7,12 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install zsh tmux fzf neovim bat ripgrep fd-find btop -y
 sudo apt install eza -y # only on 24.04
 
+# sudo apt install util-linux-extra (needed in 24.04, not in the ones before it)
+#timedatectl status
+#timedatectl set-timezone "Asia/Kolkata"
+#sudo ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+#sudo hwclock --systohc
+
 # fix fd and bat
 mkdir -p ~/.local/bin
 ln -s $(which fdfind) ~/.local/bin/fd
